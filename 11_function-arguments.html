@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+
+        // function parameters
+        function sayHi(firstName, lastName = 'DESCONOCIDO') {
+            console.log(`¡Hola, ${firstName} ${lastName}!`)
+        }
+
+        // function arguments
+        sayHi('Cris', 'Ramos')
+        sayHi('Víctor')
+
+
+
+
+        function composeBookingConfirmation(guest, arrival = 'PENDIENTE', cost, type = 'VISTA MAR') {
+            const text = `Le confirmamos su reserva, ${guest}, para el día ${arrival}. Una habitación de tipo ${type} por ${cost}€`
+            console.log(text)
+        }
+
+        composeBookingConfirmation('Germán', '11/12/2023', 327.5)
+        composeBookingConfirmation('Laura', '22/11/2023', 647.5, 'ESTÁNDAR')
+
+    </script>
+</body>
+
+</html>

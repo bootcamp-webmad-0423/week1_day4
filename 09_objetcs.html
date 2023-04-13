@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        const person = {
+            firstName: 'Germán',
+            lastName: 'Álvarez',
+            age: 36,
+            hobbies: ['ski', 'rave', 'gym'],
+            celiac: false,
+            job: {
+                title: 'Lead teacher',
+                salary: 1000
+            },
+            subscriptions: [
+                {
+                    service: 'HBO',
+                    cost: 19
+                },
+                {
+                    service: 'Prime',
+                    cost: 9.99
+                }
+            ]
+        }
+
+
+        // Access (getter)
+        console.log(`Me llamo ${person.firstName} ${person.lastName} y trabajo de ${person.job.title}`)
+
+        // Access (iterative)
+        for (let i = 0; i < person.hobbies.length; i++) {
+            console.log('Me gusta ->', person.hobbies[i])
+        }
+
+        // // Access (forEach)
+        // person.hobbies.forEach(function (eachHobby) {
+        //     console.log('ESTO ES', eachHobby)
+        // })
+
+        // Access (iterative)
+        for (let i = 0; i < person.subscriptions.length; i++) {
+            console.log('Estoy suscrito a ->', person.subscriptions[i].service, 'por un total de', person.subscriptions[i].cost)
+        }
+
+        // Access (setter)
+        person.job.salary = 800
+        console.log('Ahora gano', person.job.salary, '€... D:')
+
+
+        // Object keys
+        console.log('Las claves del objeto son:', Object.keys(person))
+
+        // Object values
+        console.log('Los valores del objeto son:', Object.values(person))
+
+    </script>
+</body>
+
+</html>

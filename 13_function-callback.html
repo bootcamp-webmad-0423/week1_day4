@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        // // Callback example 1
+        // function sayHi(callback) {
+        //     console.log('¡HOLA HOLITA YAY!')
+        //     callback()
+        // }
+
+        // function sayBye() {
+        //     console.log('CHAO PESCAO')
+        // }
+
+        // sayHi(sayBye)
+
+
+
+
+
+
+
+
+        // Callback example 2
+        function sayHi() {
+            console.log('¡HOLA HOLITA YAY!')
+        }
+
+        function sayBye() {
+            console.log('CHAO PESCAO')
+        }
+
+        function doSomething(action) {
+            console.log('ESTOY HACIENDO ALGO')
+            action()
+            console.warn('-----')
+        }
+
+        doSomething(sayBye)
+        doSomething(sayHi)
+
+
+
+
+
+
+
+
+
+        // Callback example 2
+        function applyNormalVAT(subtotal) {
+            console.log('El precio final es de', subtotal * 1.21, '(IVA regular)')
+        }
+        function applyReducedVAT(subtotal) {
+            console.log('El precio final es de', subtotal * 1.1, '(IVA reducido)')
+        }
+        function applyExentVAT(subtotal) {
+            console.log('El precio final es de', subtotal * 1, '(IVA exento)')
+        }
+
+
+
+        function getTotal(cost, taxFn) {
+            const subtotal = cost * 1.25
+            taxFn(subtotal)
+        }
+
+
+        getTotal(1000, applyExentVAT)
+        getTotal(1000, applyNormalVAT)
+        getTotal(1000, applyReducedVAT)
+
+
+
+
+
+    </script>
+</body>
+
+</html>

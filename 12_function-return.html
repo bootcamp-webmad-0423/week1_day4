@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        function composeBookingConfirmation(guest, arrival = 'PENDIENTE', cost, type = 'VISTA MAR') {
+            const bookingText = `Le confirmamos su reserva, ${guest}, para el día ${arrival}. Una habitación de tipo ${type} por ${cost}€`
+            return bookingText
+        }
+
+        const booking1 = composeBookingConfirmation('Germán', '11/12/2023', 327.5)
+        const booking2 = composeBookingConfirmation('Laura', '22/11/2023', 647.5, 'ESTÁNDAR')
+
+        document.write(booking1)
+        console.log(booking2)
+
+
+
+
+        console.log('------')
+
+
+
+
+        function isMultiple(value1, value2) {
+            if (value1 % value2 === 0) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+
+        const result = isMultiple(10, 5)
+        console.log('¿Son múltiplos 10 y 5?', result)
+
+
+
+
+        console.log('------')
+
+
+
+        function calculateTotalPrice(cost, taxPercent) {
+
+            const benefit = .1
+            const subtotal = cost + cost * benefit
+            const taxPart = subtotal * taxPercent
+
+            const total = subtotal + taxPart
+
+            return total
+        }
+
+
+        const price1 = calculateTotalPrice(10, .21)
+
+        console.log('EL total es', price1)
+
+    </script>
+</body>
+
+</html>
